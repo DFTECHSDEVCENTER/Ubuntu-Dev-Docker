@@ -1,5 +1,8 @@
 FROM amd64/ubuntu:18.04
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y && apt install tzdata
+
+RUN echo "Asia/Kolkata" | tee /etc/timezone
+RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 LABEL maintainer="DFTechs <dftechs@dfcommunity.win>" \
   org.label-schema.name="DFTechs Ubuntu Dev" \
