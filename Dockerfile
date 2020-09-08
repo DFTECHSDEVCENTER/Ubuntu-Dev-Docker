@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:latest
+FROM ubuntu:latest
 RUN apt-get update && apt-get upgrade -y && apt install tzdata
 
 RUN echo "Asia/Kolkata" | tee /etc/timezone
