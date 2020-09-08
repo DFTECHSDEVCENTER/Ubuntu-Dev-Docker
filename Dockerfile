@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:20.04
+FROM amd64/ubuntu:18.04
 RUN apt-get update && apt-get upgrade -y && apt install tzdata
 
 RUN echo "Asia/Kolkata" | tee /etc/timezone
